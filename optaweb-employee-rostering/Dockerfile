@@ -1,7 +1,7 @@
-FROM maven:3-jdk-8-slim AS builder
+FROM maven:3.8.1-openjdk-16-slim AS builder
 MAINTAINER EasyPi Software Foundation
 
-ENV APP_VERSION=7.45.0.Final
+ENV APP_VERSION=8.8.0.Final
 ENV APP_URL=https://github.com/kiegroup/optaweb-employee-rostering/archive/${APP_VERSION}.tar.gz
 
 WORKDIR /opt/app
@@ -14,10 +14,10 @@ RUN set -xe \
 # Dockerfile for optaweb-employee-rostering
 #
 
-FROM openjdk:8-alpine
+FROM openjdk:16-alpine
 MAINTAINER EasyPi Software Foundation
 
-ENV APP_VERSION=7.45.0.Final
+ENV APP_VERSION=8.8.0.Final
 
 WORKDIR /opt/app
 
